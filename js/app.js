@@ -1,3 +1,6 @@
+// global variable
+let totalPostReadCount = 0;
+
 const loadAllPostData = async () => {
   const postContainer = document.getElementById("post-container");
   const res = await fetch(
@@ -54,7 +57,7 @@ const loadAllPostData = async () => {
            </p>
          </div>
 
-         <button>
+         <button onclick="addReadPost('${item?.title}','${item?.view_count}')">
            <img src="./images/email.png" />
          </button>
        </div>
@@ -63,6 +66,26 @@ const loadAllPostData = async () => {
      `;
     postContainer.appendChild(div);
   });
+};
+
+const addReadPost = (title, view) => {
+  totalPostReadCount++;
+  document.getElementById("total-post-read").innerText = totalPostReadCount;
+
+  const postReadContainer = document.getElementById("read-container");
+  const div = document.createElement("div");
+  div.innerHTML = `
+   <div class="flex mt-5 bg-white p-4 rounded-xl shadow-md">
+   <p class="leading-7 font-semibold">
+     ${title}
+   </p>
+   <p class="font-inter flex items-center *:text-black/60">
+     <i class="fa-regular fa-eye mr-2"></i>
+     <span>${view}</span>
+   </p>
+ </div>
+   `;
+  postReadContainer.appendChild(div);
 };
 
 loadAllPostData();
