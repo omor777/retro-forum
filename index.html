@@ -55,35 +55,59 @@
     </script>
   </head>
   <body class="font-inter">
-    <header class="container my-12">
+    <header class="container my-8 lg:my-12 px-4 lg:px-0">
       <nav class="flex items-center justify-between">
-        <h3 class="text-4xl font-[900]">ReTro</h3>
-        <div class="flex items-center gap-6">
-          <ul
-            class="flex items-center *:size-14 *:rounded-[100vw] *:bg-[#12132D08] *:border *:border-[#0307121A] gap-3"
+        <h3 class="text-[clamp(1.25rem,5vw,36px)] font-[900]">ReTro</h3>
+        <div id="menu" class="hidden lg:block">
+          <div
+            class="flex items-center justify-center gap-4 lg:gap-3 absolute lg:relative left-0 top-20 lg:top-auto w-full lg:w-auto"
           >
-            <li class="flex items-center justify-center cursor-pointer">
-              <i class="fa-solid fa-house text-[#12132D99]"></i>
-            </li>
-            <li class="flex items-center justify-center cursor-pointer">
-              <i class="fa-solid fa-pen text-[#12132D99]"></i>
-            </li>
-            <li class="flex items-center justify-center cursor-pointer">
-              <i class="fa-solid fa-user-plus text-[#12132D99]"></i>
-            </li>
-            <li class="flex items-center justify-center cursor-pointer">
-              <i class="fa-regular fa-flag text-[#12132D99]"></i>
-            </li>
-          </ul>
-          <button
-            class="bg-primary py-4 px-10 rounded-full text-xl font-bold text-white"
-          >
-            Sing In
-          </button>
+            <div
+              class="tooltip size-10 lg:size-14 rounded-full bg-[#12132D08] border border-[#0307121A] flex items-center justify-center cursor-pointer"
+              data-tip="Home"
+            >
+              <button class="">
+                <i class="fa-solid fa-house text-[#12132D99]"></i>
+              </button>
+            </div>
+            <div
+              class="tooltip size-10 lg:size-14 rounded-full bg-[#12132D08] border border-[#0307121A] flex items-center justify-center cursor-pointer"
+              data-tip="Edit"
+            >
+              <button>
+                <i class="fa-solid fa-pen text-[#12132D99]"></i>
+              </button>
+            </div>
+            <div
+              class="tooltip size-10 lg:size-14 rounded-full bg-[#12132D08] border border-[#0307121A] flex items-center justify-center cursor-pointer"
+              data-tip="Add"
+            >
+              <button>
+                <i class="fa-solid fa-user-plus text-[#12132D99]"></i>
+              </button>
+            </div>
+            <div
+              class="tooltip size-10 lg:size-14 rounded-full bg-[#12132D08] border border-[#0307121A] flex items-center justify-center cursor-pointer"
+              data-tip="Flag"
+            >
+              <button>
+                <i class="fa-regular fa-flag text-[#12132D99]"></i>
+              </button>
+            </div>
+            <button
+              class="bg-primary lg:ml-3 py-2 lg:py-4 px-5 lg:px-10 rounded-full text-sm lg:text-xl font-medium lg:font-bold text-white"
+            >
+              Sing In
+            </button>
+          </div>
         </div>
+        <!-- toggle menu -->
+        <button onclick="toggleMenu()" class="text-2xl lg:hidden">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </nav>
     </header>
-    <main>
+    <main class="hidden">
       <!-- banner section -->
       <section class="container">
         <div
@@ -108,12 +132,14 @@
               <div
                 class="w-full max-w-[360px] bg-white h-16 rounded-full flex items-center mt-8 overflow-hidden"
               >
-                <input id="search-value"
+                <input
+                  id="search-value"
                   class="pl-5 h-full flex-1 outline-none caret-indigo-500"
                   type="text"
                   placeholder="Search here anything"
                 />
-                <button id="search-post"
+                <button
+                  id="search-post"
                   class="h-12 bg-primary px-6 rounded-full mr-2 cursor-pointer text-white text-xl font-bold"
                 >
                   Search
@@ -243,7 +269,7 @@
           rgba(18, 19, 45, 0) 100%
         );
       "
-      class="mt-24 py-24 flex items-center justify-center"
+      class="mt-24 py-24 flex items-center justify-center hidden"
     >
       <div class="container">
         <h3 class="font-[900] text-3xl text-center text-black/70">ReTro</h3>

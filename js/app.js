@@ -41,7 +41,7 @@ const displayAllPost = (data) => {
              id="active-status"
              class="size-5 ${
                item?.isActive ? "bg-green-500" : "bg-red-500"
-             } absolute rounded-full right-[-7%] top-[-7%]"
+             } absolute rounded-full right-[-12%] top-[-12%]"
            ></span>
          </div>
     
@@ -167,8 +167,11 @@ const loadLatestPost = async () => {
   });
 };
 
+const toggleMenu = () => {
+  const menu = document.getElementById("menu");
+  menu.classList.toggle("hidden");
+};
+
 loadLatestPost();
 
 loadAllPostData(false, "");
-
-
