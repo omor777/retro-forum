@@ -88,4 +88,46 @@ const addReadPost = (title, view) => {
   postReadContainer.appendChild(div);
 };
 
+const loadLatestPost = async () => {
+  const latestPostContainer = document.getElementById("latest-post-container");
+  const res = await fetch(
+    `https://openapi.programming-hero.com/api/retro-forum/latest-posts`
+  );
+  const data = await res.json();
+  data.forEach((item) => {
+    const div = document.createElement("div");
+    div.innerHTML = `
+    <div class="p-6 shadow-md bg-white border border-[#12132D26] rounded-3xl">
+    <figure class="w-full min-h-[190px] rounded-[20px] bg-[#12132D0D]">
+      <img class="rounded-[20px]" src="${item?.cover_image}" />
+    </figure>
+
+    <div class="mt-6">
+      <p class="*:text-[#12132D99]">
+        <i class="fa-solid fa-calendar-days"></i>
+        <span class="ml-2">${item?.author?.posted_date ?? "No publish date"}</span>
+      </p>
+      <h3 class="mt-4 text-lg text-black/70 font-extrabold">
+        ${item?.title}
+      </h3>
+      <p class="text-left mt-3 text-[#12132D99]">
+       ${item?.description}
+      </p>
+
+      <div class="mt-4 grid grid-cols-[auto_1fr] gap-4">
+        <img class="size-11 rounded-full bg-gray-100" src="${item?.profile_image}" />
+        <div>
+          <h4 class="font-bold text-black/70">${item?.author?.name}</h4>
+          <p class="text-sm text-black/60">${item?.author?.designation ?? "Unknown"}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    `;
+    latestPostContainer.appendChild(div);
+  });
+};
+
+loadLatestPost();
+
 loadAllPostData();
