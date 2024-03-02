@@ -248,7 +248,7 @@
       </section>
 
       <!-- forum section -->
-      <section class="container mt-24">
+      <section class="container mt-24 hidden">
         <div
           class="bg-[#12132D] rounded-[2rem] px-24 py-12 grid grid-cols-[1fr_auto] items-center gap-5"
         >
@@ -270,7 +270,57 @@
           </figure>
         </div>
       </section>
+
+      <!-- post section -->
+      <section class="container mt-24">
+        <div>
+          <h3 class="text-[40px] font-[900] text-center text-black/70">
+            Latest Posts
+          </h3>
+        </div>
+        <p
+          class="mt-5 font-inter text-lg w-2/3 mx-auto text-center text-black/60"
+        >
+          Yes, you can run unit tests and view the results directly within the
+          app. The integrated testing features allow for a streamlined .
+        </p>
+        <!-- post container -->
+        <div
+          id="post-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12"
+        >
+          <!-- single post -->
+          <div class="p-6 bg-white border border-[#12132D26] rounded-3xl">
+            <figure class="w-full min-h-[190px] rounded-[20px] bg-[#12132D0D]">
+              <img src="" alt="" />
+            </figure>
+            <!-- card body -->
+            <div class="mt-6">
+              <p class="*:text-[#12132D99]">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span class="ml-2">29 January 2024</span>
+              </p>
+              <h3 class="mt-4 text-lg text-black/70 font-extrabold">
+                What will a mars habitat force that impact in our daily life!!!
+              </h3>
+              <p class="text-left mt-3 text-[#12132D99]">
+                Yes, you can run unit tests and view the results directly within
+                the app.
+              </p>
+
+              <div class="mt-4 grid grid-cols-[auto_1fr] gap-4">
+                <img class="size-11 rounded-full bg-gray-100" src="" alt="" />
+                <div>
+                  <h4 class="font-bold text-black/70">Cameron Williamson</h4>
+                  <p class="text-sm text-black/60">Unknown</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="./js/app.js"></script>
   </body>
 </html>
+
