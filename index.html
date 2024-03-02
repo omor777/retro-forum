@@ -43,7 +43,10 @@
               center: true,
             },
             colors: {
-              clifford: "#da373d",
+              primary: "#797DFC",
+              black: {
+                12: "#12132D",
+              },
             },
             fontFamily: {
               mulish: ["Mulish", "sans-serif"],
@@ -54,7 +57,35 @@
       };
     </script>
   </head>
-  <body>
+  <body class="font-mulish">
+    <header class="container my-12">
+      <nav class="flex items-center justify-between">
+        <h3 class="text-4xl font-[900]">ReTro</h3>
+        <div class="flex items-center gap-6">
+          <ul
+            class="flex items-center *:size-14 *:rounded-[100vw] *:bg-[#12132D08] *:border *:border-[#0307121A] gap-3"
+          >
+            <li class="flex items-center justify-center cursor-pointer">
+              <i class="fa-solid fa-house text-[#12132D99]"></i>
+            </li>
+            <li class="flex items-center justify-center cursor-pointer">
+              <i class="fa-solid fa-pen text-[#12132D99]"></i>
+            </li>
+            <li class="flex items-center justify-center cursor-pointer">
+              <i class="fa-solid fa-user-plus text-[#12132D99]"></i>
+            </li>
+            <li class="flex items-center justify-center cursor-pointer">
+              <i class="fa-regular fa-flag text-[#12132D99]"></i>
+            </li>
+          </ul>
+          <button
+            class="bg-primary py-4 px-10 rounded-full text-xl font-bold text-white"
+          >
+            Sing In
+          </button>
+        </div>
+      </nav>
+    </header>
     <script src="./js/app.js"></script>
   </body>
 </html>
