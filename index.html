@@ -44,9 +44,6 @@
             },
             colors: {
               primary: "#797DFC",
-              black: {
-                12: "#12132D",
-              },
             },
             fontFamily: {
               mulish: ["Mulish", "sans-serif"],
@@ -88,7 +85,7 @@
     </header>
     <main>
       <!-- banner section -->
-      <section class="container">
+      <section class="container hidden">
         <div
           style="background: linear-gradient(#12132d, #12132d)"
           class="min-h-[550px] rounded-[32px] relative"
@@ -152,6 +149,108 @@
               </ul>
             </div>
           </div>
+        </div>
+      </section>
+      <!-- let's discuss section -->
+      <section class="container mt-24 hidden">
+        <div>
+          <div>
+            <h3 class="font-[900] text-[40px] text-center">Let’s Discuss</h3>
+            <p
+              class="font-inter text-lg text-black/60 leading-8 w-2/3 mx-auto text-center mt-3"
+            >
+              Yes, you can run unit tests and view the results directly within
+              the app. The integrated testing features allow for a streamlined .
+            </p>
+          </div>
+
+          <!-- discuss container  -->
+          <div class="mt-12 grid grid-cols-3 gap-6">
+            <!-- post container -->
+            <div id="post-container" class="col-span-2">
+              <!-- single post -->
+              <div
+                class="grid grid-cols-[auto_1fr] gap-6 bg-[#797DFC1A] rounded-3xl border border-primary p-10"
+              >
+                <div class="size-[72px] rounded-2xl bg-white relative">
+                  <span
+                    id="active-status"
+                    class="size-5 bg-green-500 absolute rounded-full right-[-5%] top-[-5%]"
+                  ></span>
+                </div>
+                <!-- body -->
+                <div class="">
+                  <div class="flex items-center gap-5">
+                    <p class="text-black/70 font-medium font-inter text-sm">
+                      # <span>Music</span>
+                    </p>
+                    <p class="text-black/70 font-medium font-inter text-sm">
+                      Author : <span>Awlad Hossaing</span>
+                    </p>
+                  </div>
+                  <h2 class="text-xl font-bold mt-3">
+                    10 Kids Unaware of Their Halloween Costume
+                  </h2>
+                  <p class="w-full max-w-[569px] mt-3 leading-7 font-inter">
+                    It’s one thing to subject yourself to ha Halloween costume
+                    mishap because, hey that’s your prerogative
+                  </p>
+                  <div
+                    class="border-b border-dashed border-black/20 my-5"
+                  ></div>
+
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-7 *:font-inter">
+                      <p class="space-x-2 *:text-black/80">
+                        <i class="fa-regular fa-comment"></i>
+                        <span>505</span>
+                      </p>
+                      <p class="space-x-2 *:text-black/80">
+                        <i class="fa-regular fa-eye"></i>
+                        <span>1,233</span>
+                      </p>
+                      <p class="space-x-2 *:text-black/80">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>5 min</span>
+                      </p>
+                    </div>
+
+                    <button>
+                      <img src="./images/email 1.png" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- right -->
+            <div class="col-span-1 bg-[#797DFC1A] rounded-3xl p-6">
+              <div class="flex items-center justify-between">
+                <p>
+                  <span class="text-xl font-bold text-black/70">Title</span>
+                </p>
+                <div class="flex items-center font-inter text-black/60">
+                  <img class="mr-3" src="./images/Frame.png" />
+                  Mark as read ( <span>4</span> )
+                </div>
+              </div>
+              <div class="flex mt-5 bg-white p-4 rounded-xl">
+                <p class="leading-7 font-semibold">
+                  10 Kids Unaware of Their Halloween Costume
+                </p>
+                <p class="font-inter flex items-center *:text-black/60">
+                  <i class="fa-regular fa-eye mr-2"></i>
+                  <span>1550</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- forum section -->
+      <section class="container">
+        <div class="bg-[#12132D] rounded-[2rem]">
+
         </div>
       </section>
     </main>
