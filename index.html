@@ -201,10 +201,12 @@
         </div>
       </section>
       <!-- let's discuss section -->
-      <section class="container mt-24 px-4 lg:px-0">
+      <section class="container mt-24 px-4 lg:px-0 hidden">
         <div>
           <div>
-            <h3 class="font-[900] text-[clamp(28px,6vw,40px)] text-center">Let’s Discuss</h3>
+            <h3 class="font-[900] text-[clamp(28px,6vw,40px)] text-center">
+              Let’s Discuss
+            </h3>
             <p
               class="font-inter text-lg text-black/60 leading-8 lg:w-2/3 mx-auto text-center mt-3"
             >
@@ -218,12 +220,12 @@
             <!-- post container -->
             <div
               id="post-container"
-              class="lg:col-span-2 col-span-3 order-2 lg:order-1 grid grid-cols-1 gap-6 h-fit "
+              class="lg:col-span-2 col-span-3 order-2 lg:order-1 grid grid-cols-1 gap-6 h-fit"
             ></div>
             <!-- right -->
             <div
               id="read-container"
-              class="lg:col-span-1 col-span-3 order-1 lg:order-2 bg-[#797DFC1A] rounded-3xl  p-6 h-fit"
+              class="lg:col-span-1 col-span-3 order-1 lg:order-2 bg-[#797DFC1A] rounded-3xl p-6 h-fit"
             >
               <div class="flex items-center justify-between">
                 <p>
@@ -240,25 +242,34 @@
       </section>
 
       <!-- forum section -->
-      <section class="container mt-24 hidden">
+      <section class="container mt-24 px-4 lg:px-0">
         <div
-          class="bg-[#12132D] rounded-[2rem] px-24 py-12 grid grid-cols-[1fr_auto] items-center gap-5"
+          class="bg-[#12132D] rounded-[2rem] px-5 lg:px-24 py-12 grid grid-cols-1 lg:grid-cols-[1fr_auto] items-center gap-5"
         >
-          <div>
-            <h2 class="text-white text-[40px] font-[900]">Join Our Forum</h2>
-            <p class="text-white/80 mt-3 leading-7 text-lg font-medium">
+          <div
+            class="flex items-center flex-col lg:items-start order-1 lg:-order-1"
+          >
+            <h2
+              class="text-white mt-8 lg:mt-0 text-[clamp(30px,6vw,40px)] font-[900]"
+            >
+              Join Our Forum
+            </h2>
+            <p
+              class="text-white/80 mt-3 text-center text-sm lg:text-left lg:leading-7 leading-6 lg:text-lg font-medium"
+            >
               Share your favorite opinion and win and wp forum coffee mug! Yes,
               you can run unit tests and view the results directly within the
               app.
             </p>
             <button
-              class="text-white text-xl font-bold bg-primary py-3 px-10 rounded-full mt-8"
+              class="text-white lg:text-xl font-medium lg:font-bold bg-primary py-3 px-10 rounded-full mt-8"
             >
               Registered Now
             </button>
           </div>
-          <figure>
-            <img src="./images/joinforum.png" />
+          <!-- right -->
+          <figure class="flex items-center justify-center">
+            <img class="max-w-full object-cover" src="./images/joinforum.png" />
           </figure>
         </div>
       </section>
