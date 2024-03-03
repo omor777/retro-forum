@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Retro Forum</title>
+    <title>ReWind Forum</title>
     <!-- custom css -->
     <link rel="stylesheet" href="./css/style.css" />
     <!-- Tailwind and daisyUI cdn link -->
@@ -108,6 +108,17 @@
       </nav>
     </header>
     <main class="">
+      <!-- toast -->
+      <div>
+        <div
+          id="toast"
+          class="toast  toast-top toast-end -right-44 transition-all duration-300 fixed z-40"
+        >
+          <div class="alert alert-success">
+            <span class="text-white">Mark as read!</span>
+          </div>
+        </div>
+      </div>
       <!-- banner section -->
       <section id="banner-section" class="container px-4 lg:px-0">
         <div
@@ -200,7 +211,12 @@
               and explore diverse perspectives on topics spanning the spectrum.
             </p>
           </div>
-
+          <!-- loader -->
+          <div id="loader" class="text-center mt-8 hidden">
+            <span
+              class="loading loading-spinner loading-lg text-primary"
+            ></span>
+          </div>
           <!-- discuss container  -->
           <div class="mt-12 grid grid-cols-3 gap-6">
             <!-- post container -->

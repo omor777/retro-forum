@@ -1,12 +1,13 @@
 const searchPost = document.getElementById("search-post");
 const postContainer = document.getElementById("post-container");
+const toast = document.getElementById("toast");
 
 // global variable
 let totalPostReadCount = 0;
 
 const loadAllPostData = async (isSearch, searchValue) => {
   let url;
-
+  searchValue = searchValue.trim();
   let api1 = `https://openapi.programming-hero.com/api/retro-forum/posts`;
   let api2 = `https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchValue}`;
 
@@ -15,6 +16,12 @@ const loadAllPostData = async (isSearch, searchValue) => {
     searchValue === "comedy" ||
     searchValue === "music"
   ) {
+    const loader = document.getElementById("loader");
+    loader.classList.remove("hidden");
+
+    setTimeout(() => {
+      loader.classList.add("hidden");
+    }, 1500);
     url = api2;
   } else {
     url = api1;
@@ -24,6 +31,14 @@ const loadAllPostData = async (isSearch, searchValue) => {
   const data = await res.json();
 
   displayAllPost(data.posts);
+};
+
+const handleToastMsh = () => {
+  
+  toast.classList.remove("-right-44");
+  setTimeout(() => {
+    toast.classList.add("-right-44");
+  }, 2000);
 };
 
 const displayAllPost = (data) => {
@@ -82,7 +97,7 @@ const displayAllPost = (data) => {
     
              <button onclick="addReadPost(&quot;${item?.title}&quot;,&quot;${
       item?.view_count
-    }&quot;)">
+    }&quot;);handleToastMsh()">
                <img src="./images/email.png" />
              </button>
            </div>
