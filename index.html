@@ -109,7 +109,7 @@
     </header>
     <main class="">
       <!-- banner section -->
-      <section id="banner-section" class="container px-4 lg:px-0">
+      <section id="banner-section" class="container px-4 lg:px-0 hidden">
         <div
           style="background: linear-gradient(#12132d, #12132d)"
           class="min-h-[550px] rounded-[32px] relative"
@@ -167,7 +167,9 @@
               </div>
             </div>
             <!-- right -->
-            <div class="bg-white h-full max-h-[288px] p-8 lg:p-12  rounded-[32px]">
+            <div
+              class="bg-white h-full max-h-[288px] p-8 lg:p-12 rounded-[32px]"
+            >
               <ul class="space-y-5">
                 <li
                   class="lg:*:text-2xl *:text-black/80 *:font-medium flex items-center justify-between gap-8"
@@ -199,12 +201,12 @@
         </div>
       </section>
       <!-- let's discuss section -->
-      <section class="container mt-24 hidden">
+      <section class="container mt-24 px-4 lg:px-0">
         <div>
           <div>
-            <h3 class="font-[900] text-[40px] text-center">Let’s Discuss</h3>
+            <h3 class="font-[900] text-[clamp(28px,6vw,40px)] text-center">Let’s Discuss</h3>
             <p
-              class="font-inter text-lg text-black/60 leading-8 w-2/3 mx-auto text-center mt-3"
+              class="font-inter text-lg text-black/60 leading-8 lg:w-2/3 mx-auto text-center mt-3"
             >
               Yes, you can run unit tests and view the results directly within
               the app. The integrated testing features allow for a streamlined .
@@ -216,12 +218,12 @@
             <!-- post container -->
             <div
               id="post-container"
-              class="col-span-2 grid grid-cols-1 gap-6 h-fit"
+              class="lg:col-span-2 col-span-3 order-2 lg:order-1 grid grid-cols-1 gap-6 h-fit "
             ></div>
             <!-- right -->
             <div
               id="read-container"
-              class="col-span-1 bg-[#797DFC1A] rounded-3xl p-6 h-fit"
+              class="lg:col-span-1 col-span-3 order-1 lg:order-2 bg-[#797DFC1A] rounded-3xl  p-6 h-fit"
             >
               <div class="flex items-center justify-between">
                 <p>

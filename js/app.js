@@ -33,7 +33,7 @@ const displayAllPost = (data) => {
     const div = document.createElement("div");
     div.innerHTML = `
          <div
-         class="grid grid-cols-[auto_1fr] gap-6 bg-[#797DFC1A] rounded-3xl border border-primary p-10 shadow-md"
+         class="grid lg:grid-cols-[auto_1fr] gap-6 bg-[#797DFC1A] rounded-3xl border border-primary p-6 lg:p-10 shadow-md"
        >
          <div class="size-[72px] rounded-2xl bg-white relative ">
             <img class="rounded-2xl" src="${item?.image}">
@@ -54,7 +54,7 @@ const displayAllPost = (data) => {
                Author : <span>${item?.author?.name}</span>
              </p>
            </div>
-           <h2 class="text-xl font-bold mt-3">
+           <h2 class="lg:text-xl fo font-bold mt-3">
              ${item?.title}
            </h2>
            <p class="w-full max-w-[569px] mt-3 leading-7 font-inter">
@@ -64,19 +64,19 @@ const displayAllPost = (data) => {
              class="border-b border-dashed border-black/20 my-5"
            ></div>
     
-           <div class="flex items-center justify-between">
+           <div class="flex items-center  justify-between">
              <div class="flex items-center gap-7 *:font-inter">
-               <p class="space-x-2 *:text-black/80">
+               <p class="flex flex-col lg:flex-row gap-y-1 gap-x-2 items-center *:text-black/80">
                  <i class="fa-regular fa-comment"></i>
                  <span>${item?.comment_count}</span>
                </p>
-               <p class="space-x-2 *:text-black/80">
+               <p class="flex flex-col lg:flex-row gap-y-1 gap-x-2 items-center *:text-black/80">
                  <i class="fa-regular fa-eye"></i>
                  <span>${item?.view_count}</span>
                </p>
-               <p class="space-x-2 *:text-black/80">
+               <p class="flex flex-col lg:flex-row gap-y-1 gap-x-2 items-center *:text-black/80">
                  <i class="fa-regular fa-clock"></i>
-                 <span>${item?.posted_time} min</span>
+                 <span>${item?.posted_time + "min"}</span>
                </p>
              </div>
     
@@ -108,12 +108,12 @@ const addReadPost = (title, view) => {
   const postReadContainer = document.getElementById("read-container");
   const div = document.createElement("div");
   div.innerHTML = `
-   <div class="flex mt-5 bg-white p-4 rounded-xl shadow-md">
-   <p class="leading-7 font-semibold">
+   <div class="flex items-center justify-between mt-5 bg-white p-4 rounded-xl shadow-md">
+   <p class="lg:leading-7 font-medium lg:font-semibold">
      ${title}
    </p>
-   <p class="font-inter flex items-center *:text-black/60">
-     <i class="fa-regular fa-eye mr-2"></i>
+   <p class="font-inter flex flex-col lg:flex-row   items-center *:text-black/60">
+     <i class="fa-regular fa-eye mb-1 lg:mb-0 lg:mr-2"></i>
      <span>${view}</span>
    </p>
  </div>
@@ -168,9 +168,9 @@ const loadLatestPost = async () => {
 };
 
 const toggleMenu = () => {
-  const bannerSection  = document.getElementById('banner-section')
+  const bannerSection = document.getElementById("banner-section");
   const menu = document.getElementById("menu");
-  bannerSection.classList.toggle('pt-10')
+  bannerSection.classList.toggle("pt-10");
   menu.classList.toggle("hidden");
 };
 
