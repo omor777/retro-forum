@@ -11,9 +11,9 @@ const loadAllPostData = async (isSearch, searchValue) => {
   let api2 = `https://openapi.programming-hero.com/api/retro-forum/posts?category=${searchValue}`;
 
   if (
-    (isSearch && searchValue === "Coding") ||
-    searchValue === "Comedy" ||
-    searchValue === "Music"
+    (isSearch && searchValue === "coding") ||
+    searchValue === "comedy" ||
+    searchValue === "music"
   ) {
     url = api2;
   } else {
@@ -80,9 +80,9 @@ const displayAllPost = (data) => {
                </p>
              </div>
     
-             <button onclick="addReadPost('${item?.title}','${
+             <button onclick="addReadPost(&quot;${item?.title}&quot;,&quot;${
       item?.view_count
-    }')">
+    }&quot;)">
                <img src="./images/email.png" />
              </button>
            </div>
@@ -95,7 +95,7 @@ const displayAllPost = (data) => {
 
 const showPostByCategorySearch = async () => {
   const category = document.getElementById("search-value");
-  loadAllPostData(true, category.value);
+  loadAllPostData(true, category.value.toLowerCase());
   category.value = "";
 };
 
@@ -168,7 +168,9 @@ const loadLatestPost = async () => {
 };
 
 const toggleMenu = () => {
+  const bannerSection  = document.getElementById('banner-section')
   const menu = document.getElementById("menu");
+  bannerSection.classList.toggle('pt-10')
   menu.classList.toggle("hidden");
 };
 
