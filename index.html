@@ -109,7 +109,7 @@
     </header>
     <main class="">
       <!-- banner section -->
-      <section id="banner-section" class="container px-4 lg:px-0 hidden">
+      <section id="banner-section" class="container px-4 lg:px-0">
         <div
           style="background: linear-gradient(#12132d, #12132d)"
           class="min-h-[550px] rounded-[32px] relative"
@@ -201,14 +201,16 @@
         </div>
       </section>
       <!-- let's discuss section -->
-      <section class="container mt-24 px-4 lg:px-0 hidden">
+      <section class="container mt-24 px-4 lg:px-0">
         <div>
           <div>
-            <h3 class="font-[900] text-[clamp(28px,6vw,40px)] text-center">
+            <h3
+              class="font-[900] text-[clamp(28px,6vw,40px)] text-center text-black/70"
+            >
               Let’s Discuss
             </h3>
             <p
-              class="font-inter text-lg text-black/60 leading-8 lg:w-2/3 mx-auto text-center mt-3"
+              class="text-lg text-black/60 leading-8 lg:w-2/3 mx-auto text-center mt-3"
             >
               Yes, you can run unit tests and view the results directly within
               the app. The integrated testing features allow for a streamlined .
@@ -231,7 +233,7 @@
                 <p>
                   <span class="text-xl font-bold text-black/70">Title</span>
                 </p>
-                <div class="flex items-center font-inter text-black/60">
+                <div class="flex items-center text-black/60">
                   <img class="mr-3" src="./images/Frame.png" />
                   Mark as read ( <span id="total-post-read">0</span> )
                 </div>
@@ -242,7 +244,7 @@
       </section>
 
       <!-- forum section -->
-      <section class="container mt-24 px-4 lg:px-0 hidden">
+      <section class="container mt-24 px-4 lg:px-0">
         <div
           class="bg-[#12132D] rounded-[2rem] px-5 lg:px-24 py-12 grid grid-cols-1 lg:grid-cols-[1fr_auto] items-center gap-5"
         >
@@ -277,13 +279,13 @@
       <!-- post section -->
       <section class="container mt-24 px-4 lg:px-0">
         <div>
-          <h3 class="text-[clamp(30px,6vw,40px)] font-[900] text-center text-black/70">
+          <h3
+            class="text-[clamp(30px,6vw,40px)] font-[900] text-center text-black/70"
+          >
             Latest Posts
           </h3>
         </div>
-        <p
-          class="mt-5 font-inter lg:text-lg lg:w-2/3 mx-auto text-center text-black/60"
-        >
+        <p class="mt-5 lg:text-lg lg:w-2/3 mx-auto text-center text-black/60">
           Yes, you can run unit tests and view the results directly within the
           app. The integrated testing features allow for a streamlined .
         </p>
@@ -296,18 +298,11 @@
     </main>
 
     <footer
-      style="
-        background: linear-gradient(
-          180deg,
-          rgba(18, 19, 45, 0.05) 0%,
-          rgba(18, 19, 45, 0) 100%
-        );
-      "
-      class="mt-24 py-24 flex items-center justify-center hidden"
+      class="mt-24 lg:py-24 py-14 flex items-center justify-center bg-gray-100"
     >
-      <div class="container">
+      <div class="container px-4 lg:px-0">
         <h3 class="font-[900] text-3xl text-center text-black/70">ReTro</h3>
-        <p class="w-2/3 mx-auto text-center mt-4">
+        <p class="lg:w-2/3 mx-auto text-center mt-4">
           Contrary to popular belief, Lorem Ipsum is not simply random text. It
           has roots in a piece of classical Latin literature from 45 BC
         </p>
@@ -320,7 +315,7 @@
           <a href="#"><i class="fa-brands fa-github"></i></a>
         </div>
         <div class="divider"></div>
-        <p class="text-center mt-12 font-light text-black/80">
+        <p class="text-center mt-6 lg:mt-12 font-light text-black/80">
           2017, All Rights Reserved.
         </p>
       </div>
