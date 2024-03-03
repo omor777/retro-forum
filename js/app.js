@@ -130,9 +130,9 @@ const loadLatestPost = async () => {
   data.forEach((item) => {
     const div = document.createElement("div");
     div.innerHTML = `
-    <div class="p-6 shadow-md bg-white border border-[#12132D26] rounded-3xl">
+    <div class="p-4 lg:p-6 shadow-md bg-white border border-[#12132D26] rounded-3xl">
     <figure class="w-full min-h-[190px] rounded-[20px] bg-[#12132D0D]">
-      <img class="rounded-[20px]" src="${item?.cover_image}" />
+      <img class="rounded-[20px] object-cover" src="${item?.cover_image}" />
     </figure>
 
     <div class="mt-6">
@@ -142,7 +142,7 @@ const loadLatestPost = async () => {
           item?.author?.posted_date ?? "No publish date"
         }</span>
       </p>
-      <h3 class="mt-4 text-lg text-black/70 font-extrabold">
+      <h3 class="mt-4 lg:text-lg text-black/70 font-extrabold">
         ${item?.title}
       </h3>
       <p class="text-left mt-3 text-[#12132D99]">

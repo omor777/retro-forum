@@ -242,7 +242,7 @@
       </section>
 
       <!-- forum section -->
-      <section class="container mt-24 px-4 lg:px-0">
+      <section class="container mt-24 px-4 lg:px-0 hidden">
         <div
           class="bg-[#12132D] rounded-[2rem] px-5 lg:px-24 py-12 grid grid-cols-1 lg:grid-cols-[1fr_auto] items-center gap-5"
         >
@@ -275,14 +275,14 @@
       </section>
 
       <!-- post section -->
-      <section class="container mt-24 hidden">
+      <section class="container mt-24 px-4 lg:px-0">
         <div>
-          <h3 class="text-[40px] font-[900] text-center text-black/70">
+          <h3 class="text-[clamp(30px,6vw,40px)] font-[900] text-center text-black/70">
             Latest Posts
           </h3>
         </div>
         <p
-          class="mt-5 font-inter text-lg w-2/3 mx-auto text-center text-black/60"
+          class="mt-5 font-inter lg:text-lg lg:w-2/3 mx-auto text-center text-black/60"
         >
           Yes, you can run unit tests and view the results directly within the
           app. The integrated testing features allow for a streamlined .
